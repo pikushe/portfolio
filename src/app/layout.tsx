@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/header";
 import Sidebar from "@/components/sidebar";
 import { cn } from "@/lib/utils";
-import Logo from "../../public/Logo.jpg"
 
 const azeretMono = Azeret_Mono({
   subsets: ['latin']
