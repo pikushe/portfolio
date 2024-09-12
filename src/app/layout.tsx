@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(azeretMono.className, "flex flex-row p-12 h-screen")}
+        className={cn(azeretMono.className, "flex lg:flex-row p-6 lg:p-12 h-screen")}
       >
         <Sidebar />
         <Header />

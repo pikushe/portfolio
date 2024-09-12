@@ -23,7 +23,7 @@ export default function Header() {
         return () => clearInterval(timer)
     }, [])
     return (
-        <header className="flex flex-row justify-between bg-[#121212] h-min p-3 rounded-full w-3/4 items-center">
+        <header className="lg:flex flex-row justify-between bg-[#121212] h-min p-3 rounded-full w-3/4 items-center hidden">
             <div>
                 {currentTime}
             </div>
