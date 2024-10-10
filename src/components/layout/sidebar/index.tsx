@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Logo from "../../../public/Logo.jpg"
+import Logo from "../../../../public/Logo.jpg"
 import Link from "next/link";
-import { RiTwitterXLine, RiGithubFill, RiMenuLine } from "@remixicon/react";
+import { RiTwitterXLine, RiGithubFill, RiMenuLine, RiDiscordFill } from "@remixicon/react";
 export default function Sidebar() {
     return (
         <aside className="flex flex-col lg:justify-between lg:h-full gap-12 pr-6 relative flex-nowrap overflow-hidden lg:w-1/4 w-full h-auto">
@@ -37,11 +37,14 @@ export default function Sidebar() {
 
             <div className="flex lg:h-full justify-end lg:justify-start lg:items-end">
                 <div className="flex flex-row gap-3">
-                    <Link href={"https://x.com/pikushe"} className="border rounded-full p-2.5 hover:bg-[#242424] hover:border-[#242424] duration-200">
+                    <Link target="_blank" href={"https://x.com/pikushe"} className="border rounded-full p-2.5 hover:bg-[#242424] hover:border-[#242424] duration-200">
                         <RiTwitterXLine size={24} />
                     </Link>
-                    <Link href={"https://github.com/pikushe"} className="border rounded-full p-2.5 hover:bg-[#242424] hover:border-[#242424] duration-200">
+                    <Link target="_blank" href={"https://github.com/pikushe"} className="border rounded-full p-2.5 hover:bg-[#242424] hover:border-[#242424] duration-200">
                         <RiGithubFill size={24} />
+                    </Link>
+                    <Link target="_blank" href={"https://discord.gg/cJx5ynDwSj"} className="border rounded-full p-2.5 hover:bg-[#242424] hover:border-[#242424] duration-200">
+                        <RiDiscordFill size={24} />
                     </Link>
                 </div>
             </div>

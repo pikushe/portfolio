@@ -54,6 +54,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -86,7 +87,23 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.projects {
+  background-image: url('../../public/Project.gif');
+  background-position: center;
+}
+
+.test {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80.2831584611246%);
+}
+
+.contact-image {
+  background-image: url('../../public/Earth.gif');
+  background-repeat: repeat;
+  background-position: center;
 }

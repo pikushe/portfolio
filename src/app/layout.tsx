@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Azeret_Mono } from "next/font/google"
 import "./globals.css";
-import Header from "@/components/header";
-import Sidebar from "@/components/sidebar";
+import Header from "@/components/layout/header";
+import Sidebar from "@/components/layout/sidebar";
 import { cn } from "@/lib/utils";
 
 const azeretMono = Azeret_Mono({
@@ -12,7 +12,7 @@ const azeretMono = Azeret_Mono({
 export const metadata: Metadata = {
   title: "pikushe",
   description: "Everything about Piku is here :o",
-  authors: [{name: "piKu"}],
+  authors: [{ name: "piKu" }],
   keywords: ["piku", "pikushe", "piku1337"],
   creator: "pikushe",
   publisher: "pikushe",
@@ -33,11 +33,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(azeretMono.className, "flex lg:flex-row p-6 lg:p-12 h-screen")}
+        className={cn(azeretMono.className, "flex flex-col gap-4 lg:flex-row p-6 lg:p-12 h-screen")}
       >
         <Sidebar />
-        <Header />
-        {children}
+        <div className="flex flex-col gap-3 items-center lg:w-3/4">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
