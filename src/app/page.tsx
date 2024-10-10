@@ -7,7 +7,6 @@ export default function Home() {
     <div className="h-full w-full">
       <div className="flex flex-col gap-2 h-full max-w-[640px]">
         <MyProjects />
-        {/*<MyStacks />*/}
         <BottomCard />
       </div>
 

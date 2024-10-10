@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { RiArrowRightLine } from "@remixicon/react";
 export default function BottomCard() {
     return (
         <div className="flex flex-row gap-2 w-full h-2/5 relative">
