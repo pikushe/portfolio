@@ -1,6 +1,5 @@
 import BottomCard from "@/components/BottomCard";
 import MyProjects from "@/components/MyProjects";
-import MyStacks from "@/components/MyStack";
 
 export default function Home() {
   return (
