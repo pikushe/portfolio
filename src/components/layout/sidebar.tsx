@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "../../../public/pp.jpg"
 import Link from "next/link";
 import { RiTwitterXLine, RiGithubFill, RiMenuLine, RiDiscordFill } from "@remixicon/react";
 export default function Sidebar() {
@@ -11,7 +10,7 @@ export default function Sidebar() {
                 <div className="flex flex-row justify-between items-center w-full">
                     <div className="flex flex-row gap-2 items-center">
                         <Link href={"/"}>
-                            <Image src={Logo} alt="Logo" height={72} width={72} className="rounded-full"/>
+                            <Image src="/pp.jpg" alt="Logo" height={72} width={72} className="rounded-full" />
                         </Link>
                         <div>
                             <div className="flex flex-col gap-0">

@@ -1,5 +1,5 @@
 import MyProjectsCard from "@/components/home/MyProjectsCard";
-import ContactCard from "@/components/home/ContactCard";
+import ContactCard from "@/components/home/contact/ContactCard";
 import StackCard from "@/components/home/StackCard";
 import HappyClientsCard from "@/components/home/HappyClientsCard";
 
@@ -16,6 +16,7 @@ export default function Home() {
             <div className="flex flex-col gap-3 w-full h-full">
                 <StackCard />
             </div>
+
         </div>
     );
 }
