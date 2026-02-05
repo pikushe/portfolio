@@ -1,5 +1,6 @@
 import {RiArrowRightUpLine} from "@remixicon/react";
 import Image from "next/image";
+import Link from "next/link";
 
 function shuffle<T>(array: T[]): T[] {
     return [...array].sort(() => Math.random() - 0.4);
@@ -39,7 +40,7 @@ export default function MyProjectsCard() {
             <div className="absolute inset-0 z-5 pointer-events-none bg-gradient-to-t from-black/90 via-black/70 to-transparent"></div>
             <div className="h-full flex flex-col justify-between text-center items-center relative z-10 rounded-xl ">
                 <h2 className="flex text-center items-center text-3xl font-bold m-auto h-96 md:h-0">My Projects</h2>
-                <p className="hidden md:block text-gray-600 ml-auto bg-white mr-3 mb-3 rounded-full p-3"><RiArrowRightUpLine className="group-hover:rotate-45 transition-[rotate] duration-700" /></p>
+                <Link href={"/about#projects"} className="hidden md:block text-gray-600 ml-auto bg-white mr-3 mb-3 rounded-full p-3"><RiArrowRightUpLine className="group-hover:rotate-45 transition-[rotate] duration-700" /></Link>
             </div>
         </div>
     )
