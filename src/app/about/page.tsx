@@ -1,14 +1,16 @@
 import ImagePreview from "@/components/ImagePreview";
 import {RiArrowRightUpLine} from "@remixicon/react";
 import Link from "next/link";
+import {number} from "motion-dom";
 
 const experinceData = [
     { title: 'Front-end Developer', company: 'Inofy.co', start: '2024', finish: '2025' },
     { title: 'Front-end Developer 🪦', company: 'Stalk.live', start: '08-2022', finish: '12-2024' },
 ]
 const projects = [
-    { title: 'Stalk.live – Discord Server Analytics Platform',role: 'Frontend Development, UI Improvements & Testing', visit: { URL: '', open: false}, company: 'Inofy.co', date: '2022-2025',thumbnail: "/StalkLogo.png", image: "/StalkGG.jpg", description: "Contributed to the front-end development and ongoing evolution of Stalk.live, a web platform that ranks Discord servers based on live activity metrics such as voice participants, member counts, live streams, and camera usage. The platform served real users and communities, requiring continuous improvements to usability and performance.My responsibilities included testing, updating, and implementing new features as the platform evolved through multiple UI redesigns. I worked across several front-end stacks during different phases of the project, helping adapt and maintain the interface as the technology stack transitioned between Vue.js, React, and Next.js, all styled with Tailwind CSS." },
-    { title: 'GPE - Community Website',role: 'Frontend Development', visit: { URL: 'https://goldenphoenixexpressvtc.com/?ref=pikushe.com', open: true}, company: 'Golden Phoenix Express', date: '2025',thumbnail: "/GPELogo.png", image: "/GPE.png", description: "Contributed to the development and continuous improvement of the Golden Phoenix Express community website. I was responsible for implementing new front-end features and maintaining existing ones through updates and testing. My work focused on improving usability, ensuring responsive design, and keeping the interface consistent across different devices and screen sizes.The project was built using Next.js and Tailwind CSS, and served an active online community, requiring stable performance and regular feature enhancements." },
+    { title: 'Stalk.live – Discord Server Analytics Platform',role: 'Frontend Developer, UI Improvements & Testing', visit: { URL: '', open: false}, company: 'Inofy.co', date: '2022-2025',thumbnail: "/StalkLogo.png", image: "/StalkGG.jpg", description: "Contributed to the front-end development and ongoing evolution of Stalk.live, a web platform that ranks Discord servers based on live activity metrics such as voice participants, member counts, live streams, and camera usage. The platform served real users and communities, requiring continuous improvements to usability and performance.My responsibilities included testing, updating, and implementing new features as the platform evolved through multiple UI redesigns. I worked across several front-end stacks during different phases of the project, helping adapt and maintain the interface as the technology stack transitioned between Vue.js, React, and Next.js, all styled with Tailwind CSS." },
+    { title: 'GPE - Community Website',role: 'Frontend Developer', visit: { URL: 'https://goldenphoenixexpressvtc.com/?ref=pikushe.com', open: true}, company: 'Golden Phoenix Express', date: '2025',thumbnail: "/GPELogo.png", image: "/GPE.png", description: "Contributed to the development and continuous improvement of the Golden Phoenix Express community website. I was responsible for implementing new front-end features and maintaining existing ones through updates and testing. My work focused on improving usability, ensuring responsive design, and keeping the interface consistent across different devices and screen sizes.The project was built using Next.js and Tailwind CSS, and served an active online community, requiring stable performance and regular feature enhancements." },
+    { title: 'D&Y Law Office',role: 'Developer', visit: { URL: 'https://dyhukuk.com', open: true }, company: 'D&Y Law Office', date: '2025', thumbnail: "/DYLawyer.jpeg", image: undefined, description: 'Under maintenance 🚧' },
 ]
 export default function About() {
     return (
@@ -63,7 +65,7 @@ export default function About() {
                                     <div className="shrink-0">
                                         <ImagePreview
                                             thumbnail={"/projects" + item.thumbnail}
-                                            fullImage={"/projects" + item.image}
+                                            fullImage={item?.image}
                                             alt={item.title}
                                         />
                                     </div>

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 type Props = {
     thumbnail: string;
-    fullImage: string;
+    fullImage?: string;
     alt: string;
 };
 
@@ -29,7 +29,7 @@ export default function ImagePreview({
         <>
             {/* Küçük Kart Görseli */}
             <div
-                onClick={() => setOpen(true)}
+                onClick={() => fullImage ? setOpen(true) : setOpen(false)}
                 className="group relative rounded-2xl overflow-hidden"
             >
                 <Image
@@ -37,7 +37,7 @@ export default function ImagePreview({
                     alt={alt}
                     width={200}
                     height={200}
-                    className="transition duration-500 group-hover:scale-105 group-hover:cursor-pointer"
+                    className={`transition duration-500 group-hover:scale-105 ${fullImage && "group-hover:cursor-pointer"}`}
                 />
             </div>
 
@@ -52,7 +52,7 @@ export default function ImagePreview({
                         onClick={(e) => e.stopPropagation()}
                     >
                         <Image
-                            src={fullImage}
+                            src={"/projects"+fullImage}
                             alt={alt}
                             fill
                             className="object-contain rounded-xl"
